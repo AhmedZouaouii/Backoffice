@@ -1,0 +1,98 @@
+
+
+<section id="contact" class="flex">
+  
+    <div class="container form-group col-md-13 " data-aos="fade-up">
+     
+      <div class="form-group " style="background-color: #3f51b5; " ><br/>
+      <h3> <p class="text-light text-center" >Ajouter un article scientifique</p></h3><br/>
+        
+    </div>
+   
+<form #f="ngForm" style="background-color: #fafafa;" >
+    <div class="row" >
+      <div class="form-group col-md-6">
+        <label>Titre :</label>
+        <input  type="text"  [(ngModel)]="article.titre" minlength="3" name="name"
+        required placeholder="the product name" class="form-control" #a="ngModel">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputState">Catégorie :</label>
+        <select id="inputState" class="form-control"  >
+          <option selected [(ngModel)]="article.domaine"#b="ngModel" required> Choisir...</option>
+          <option>Li</option>
+        </select>
+        <a href="">Ajouter Une Catégorie ?</a>
+      </div>
+      <div  *ngIf="a.invalid && a.touched" >
+        <div *ngIf="a.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+       
+      </div>
+      <div  *ngIf="b.invalid && b.touched" >
+        <div *ngIf="b.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+       
+      </div>
+    </div>
+
+
+
+    <div class="row" >
+        <div class="form-group col-md-6">
+            <label for="input">Description :  </label>
+            <input type="text" class="form-control" id="inputPassword4" placeholder="Description"  [(ngModel)]="article.description"  #c="ngModel" required>
+           
+          </div>
+          
+          <div class="form-group  col-md-6">
+            <label for="inputAddress">Date :</label>
+            <div class=" datepicker date input-group shadow-sm">
+                <input type="text" placeholder="Choisir une date" class="form-control" id="reservationDate" [(ngModel)]="article.datePublication"  #d="ngModel">
+                <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-calendar"></i></span></div>
+            </div>
+      
+    </div>
+
+
+
+
+        <div class="form-group">
+            <label for="inputAddress">Paragraphe 1 : </label>
+            <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+            
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Paragraphe 2 :</label>
+            <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+            
+        </div>
+
+
+
+        <div class="form-group">
+           <label for="inputAddress2">Ecrivain : </label>
+           <input type="text" class="form-control" id="inputAddress2" placeholder="Ecrivain">
+       </div>
+
+
+   
+        <div class="form-group ">
+          <label for="inputZip">Images :</label>
+          <input type="text" class="form-control" id="inputZip">
+       </div>
+
+
+    </div>
+
+
+   
+   
+    <br>
+    <button class="btn btn-primary" (click)="save()" [disabled]="f.invalid">
+      Enregistrer
+    </button>
+  
+  </form>
+</div>
+
+
+</section><!-- End Contact Section --><br/>
