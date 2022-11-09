@@ -1,0 +1,118 @@
+<div class="content-wrapper" style="overflow-x:hidden;overflow-y: auto;max-height: 100%;">
+  <div >
+    
+    
+      
+      
+      <div class="row">
+        <div class="col-3">
+          <div style="margin-top: 25%;">
+          <ul style="list-style: none;">
+            <li class="active">Tous Les Modules</li>
+            <li class="active">Module 1</li>
+            <li class="active">Module 2</li>
+            <li class="active">Module 3</li>
+            <li class="active">Module 4</li>
+          </ul>
+        </div>
+        </div>
+        <div class="col-8">
+      <ul class="nav nav-tabs">
+        <li [ngClass]="{active: tab==1}" (click)="clicSurBouton(1,true)" [style.border-bottom]="color" class="tabulation cour" ><a style="cursor:pointer;">Cours</a></li>
+        <li [ngClass]="{active: tab==2}" (click)="clicSurBouton(2,true)" [style.border-bottom]="color"class="tabulation devoir" ><a style="cursor:pointer;">Devoirs</a></li>
+        <li [ngClass]="{active: tab==3}" (click)="clicSurBouton(3,true)" [style.border-bottom]="color"class="tabulation personne"><a style="cursor:pointer;">Personne</a></li>
+        <li [ngClass]="{active: tab==5}" (click)="clicSurBouton(4,true)" [style.border-bottom]="color" class="tabulation flux"><a style="cursor:pointer;">Flux</a></li>
+
+
+        <!--[style.border-bottom]="flag?borderA:borderB"-->
+
+      </ul>
+      <div [ngSwitch]="tab">
+        <div *ngSwitchCase="1">
+          
+          <h3 style="border-bottom:rgb(58, 39, 187) solid 2px;color:rgb(58, 39, 187);margin-top:10px;margin-bottom:10px;font-family: 'Times New Roman', Times,">cour 1</h3 >
+            <div >
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Supportcour1</li>
+              <li class="list-group-item">Supportcour2</li>
+              <li class="list-group-item">Exercice</li>
+              <li class="list-group-item">Quiz</li>
+            </ul>
+          </div>
+
+          <h3 style="border-bottom:rgb(58, 39, 187) solid 2px;color:rgb(58, 39, 187);margin-top:10px;margin-bottom:10px;font-family: 'Times New Roman', Times,">cour 2</h3 >
+            <div >
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">cour</li>
+              <li class="list-group-item">Exercice</li>
+              <li class="list-group-item">Quiz</li>
+            </ul>
+          </div>
+            
+         
+        </div>
+        <div *ngSwitchCase="2">
+          <div >
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Devoir 1</li>
+              <li class="list-group-item">Devoir 2</li>
+              <li class="list-group-item">Devoir 3</li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        <div *ngSwitchCase="3">
+          <h3 style="border-bottom:rgb(58, 39, 187) solid 2px;color:rgb(58, 39, 187);margin-top:10px;margin-bottom:10px;font-family: 'Times New Roman', Times,">Enseignant</h3 >
+            <div >
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">enseignant1</li>
+              <li class="list-group-item">enseignant2</li>
+            </ul>
+          </div>
+
+          <h3 style="border-bottom:rgb(58, 39, 187) solid 2px;color:rgb(58, 39, 187);margin-top:10px;margin-bottom:10px;font-family: 'Times New Roman', Times,">Autres élèves</h3 >
+            <div >
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">élève1</li>
+                <li class="list-group-item">élève2</li>
+                <li class="list-group-item">élève3</li>
+                <li class="list-group-item">élève4</li>
+
+                
+              </ul>
+            </div>
+          
+          
+        </div>
+
+
+
+
+      
+
+
+
+
+
+        <div *ngSwitchCase="4">
+          <div>
+            <input type="text" class="form-control " placeholder="Annoncez quelque chose à votre classe" style="margin-top: 10px;height: 50px;box-shadow: 0 0 0 .2rem whitesmoke;border-color: white;">
+              
+          </div>
+
+          </div>
+        
+       
+
+      </div>
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+
+
+

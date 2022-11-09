@@ -1,0 +1,168 @@
+ <!-- Main Sidebar Container -->
+ <aside class="main-sidebar  elevation-4" style="background-color: #081430;">
+  <!-- Brand Logo -->
+  <div class="brand-link">
+    <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-5" style="opacity: .8">
+    <h3 style="color: white;">Admin</h3>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+
+ 
+
+    <!-- SidebarSearch Form -->
+  
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item menu-open">
+          <a routerLink="element" class="nav-link ">
+            <i class="nav-icon fas fa-tachometer-alt" style="color:aliceblue"></i>
+            <p style="color:aliceblue">
+              Dashboard
+              
+            </p>
+          </a>
+         
+        </li>
+      
+        <li class="nav-item">
+          <a  class="nav-link" routerLink="classroom/home" >
+            <i class="nav-icon fas fa-copy" style="color:aliceblue"></i>
+            <p style="color:aliceblue">
+              Classroom
+              <i class="fas fa-angle-left right"></i>
+              <!--<span class="badge badge-info right">6</span>-->
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a routerLink="classroom/cour" class="nav-link">
+                <!--<i class="far fa-circle nav-icon" style="color:aliceblue"></i>-->
+                <p style="margin-left: 25%;color:aliceblue">Cour Et Devoirs</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a routerLink="classroom/flux"  class="nav-link">
+                <!--<i class="far fa-circle nav-icon" style="color:aliceblue"></i>-->
+                <p style="margin-left: 25%;color:aliceblue">Flux</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a routerLink="classroom/umail" class="nav-link">
+                <!--<i class="far fa-circle nav-icon" style="color:aliceblue"></i>-->
+                <p style="color:aliceblue;margin-left: 25%;">Umail</p>
+              </a>
+            </li>
+            <hr style="border-style: solid ;border-color:  white;width:50%;margin-left: auto;margin-right: auto;">
+            <li class="nav-item">
+              <a routerLink="classroom/classe" class="nav-link">
+                <!--<i class="far fa-circle nav-icon" style="color:aliceblue"></i>-->
+                <p style="margin-left: 25%;color:aliceblue">Classe</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="classroom/personne"  class="nav-link">
+               <!-- <i class="far fa-circle nav-icon" style="color:aliceblue"></i>-->
+                <p style="color:aliceblue;margin-left: 25%;">Personne</p>
+              </a>
+            </li>
+            <hr style="border-style: solid ;border-color:  white;width:50%;margin-left: auto;margin-right: auto;">
+            <li class="nav-item">
+              <a routerLink="classroom/corbeille" class="nav-link">
+               <!-- <i class="far fa-circle nav-icon" style="color:aliceblue"></i>-->
+                <p style="color:aliceblue;margin-left: 25%;">Corbeille</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="déconnexion" class="nav-link">
+               <!-- <i class="far fa-circle nav-icon" style="color:aliceblue"></i>-->
+                <p style="color:aliceblue;margin-left: 25%;">Déconnexion</p>
+              </a>
+            </li>
+
+          </ul>
+          <hr style="border-color: royalblue;">
+        </li>
+     
+       
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-edit" style="color:aliceblue"></i>
+            <p style="color:aliceblue">
+              Club
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="pages/forms/advanced.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p style="color:aliceblue">Nouveau Club</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/forms/general.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p style="color:aliceblue">Evènement</p>
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="pages/forms/editors.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p style="color:aliceblue">Membres</p>
+              </a>
+            </li>
+
+          </ul>
+          <hr style="border-color: royalblue;">
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-table" style="color:aliceblue"></i>
+            <p style="color:aliceblue">
+              Articles Scientifiques
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a routerLink="article" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p style="color:aliceblue">Ajouter Article</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/tables/data.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p style="color:aliceblue">DataTables</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/tables/jsgrid.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p style="color:aliceblue">jsGrid</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        
+        
+      
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+    <!-- /.sidebar  active-->
+</aside>

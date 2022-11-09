@@ -1,0 +1,35 @@
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div style="overflow: auto;max-height: 100%;">
+          
+      <h3 style="border-bottom:rgb(58, 39, 187) solid 2px;color:rgb(58, 39, 187);margin-top:10px;margin-bottom:10px;font-family: 'Times New Roman', Times,">UMail</h3 >
+        <div>
+          <button type="submit" class="btn btn-outline-success my-2 my-sm-0" style="margin-top: 10px;">New Message</button>
+
+          <input type="text" class="form-control " placeholder="Partage une information" style="margin-top: 10px;border-color: gray;">
+          <input type="text" class="form-control"  placeholder="créer et programmer des annonces " style="margin-top: 10px;border-color: gray;">
+          <input type="text" class="form-control" placeholder="Répondre au poste " style="margin-top: 10px;border-color: gray;">
+          
+        </div>
+        <div style="border-bottom:1px solid  rgb(58, 39, 187);height: 20px;margin-bottom: 20px; "></div>
+      <div >
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+           
+          <div class="form-group">
+            <label for="name">Subject</label>
+            <input type="text" class="form-control" name="subject" id="subject" style="border-color: gray;"required>
+          </div>
+          <div class="form-group">
+            <label for="name">Message</label>
+            <textarea class="form-control" name="message" rows="10" style="border-color: gray;" required></textarea>
+          </div>
+        
+          <div class="text-center" style="margin-top: 10px;"><button type="submit" class="btn btn-outline-success my-2 my-sm-0">Send Message</button></div>
+        </form>
+      </div>
+    </div>
+    </div>
+    <!-- /.content-header -->
+
