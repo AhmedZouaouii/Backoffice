@@ -1,0 +1,78 @@
+<div class="content-wrapper">
+  <div class="content">
+     
+      <div class="form-group " style="background-color: #3f51b5; " ><br/>
+      <h3> <p class="text-light text-center" >{{title}}</p></h3><br/>
+
+    
+   
+<form #f="ngForm" style="background-color: #fafafa;" >
+    <div class="row" >
+
+      <div class="form-group col-md-6">
+        <label>Nom du club :</label>
+        <input   type="text"  [(ngModel)]="club.nomClub" name="name" required minlength="3" placeholder="nom de club" class="form-control" #a="ngModel">
+      
+
+      <div  *ngIf="a.invalid && a.touched" >
+        <div *ngIf="a.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+        <div *ngIf="a.hasError('minlength')">minimum 3 caractères</div>
+      </div>
+    </div>
+        <div class="form-group col-md-6">
+          <label>Nombre de membres :</label>
+          <input   type="number" [(ngModel)]="club.nbrMembres" name="nombre" required placeholder="nombre de membres" class="form-control" #b="ngModel">
+          <div  *ngIf="b.invalid && b.touched" >
+          <div *ngIf="b.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+          
+        </div>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label>Activité :</label>
+          <input   type="text"  [(ngModel)]="club.activite" name="activite" required minlength="3" placeholder="activite" class="form-control" #c="ngModel">
+          <div  *ngIf="c.invalid && c.touched" >
+            <div *ngIf="c.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+            <div *ngIf="c.hasError('minlength')">minimum 3 caractères</div>
+          </div>
+               
+        </div>
+
+
+        <div class="form-group col-md-6">
+          <label>Budget :</label>
+          <input   type="number"  [(ngModel)]="club.budget" name="budget" required placeholder="budget" class="form-control" #d="ngModel">
+          <div  *ngIf="d.invalid && d.touched" ></div>
+          <div *ngIf="d.hasError ('required')">
+          <p style="color: red;">Ce champs est obligatoire *</p></div> 
+       
+        </div>
+   
+    
+        <div class=" myDate">
+          <label for="inputAddress">Date :</label> <br/>
+          <input type="date" [(ngModel)]="club.dateFondation"  required style="width:636px; height: 38px;" name="date"#g="ngModel">
+            <div  *ngIf="g.invalid && g.touched" ></div>
+            <div *ngIf="g.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+          </div>
+        
+        
+       
+  
+   
+   <!--<br>--> 
+    <div>
+    <button class="btn btn-primary"  style="  display: block;"(click)="save()" [disabled]="f.invalid">
+      Enregistrer  </button>
+    </div>
+    <div *ngIf="alert "class="alert alert-success" role="alert">
+      <strong>Success ! </strong>Club ajouté avec succées !
+    </div>
+  
+    </div>
+  </form>
+    </div>
+    
+
+  </div>
+</div>

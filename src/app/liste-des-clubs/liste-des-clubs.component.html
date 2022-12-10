@@ -1,0 +1,52 @@
+<div class="content-wrapper">
+    <div class="content">
+      <div class="row pt-1">
+        <div class="col-12">
+          <h3 class="text-uppercase border-bottom mb-6">Listes des Clubs</h3>
+          <div style="display: inline;" >
+     
+            <input type="text" style="border:none ; height : 46px ;width:400px; margin-right:720px ; margin-left:18px" placeholder="Trouver un article : id titre ..." > 
+            <button  class="btn btn-warning "[routerLink]="'/statistics'" >Statistiques</button>
+        </div><br>
+        <hr>
+          <div class="row col-12" >
+            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+            <div class="col-lg-6 mb-6 d-flex align-items-stretch" *ngFor="let art of club">
+              <div class="card" style="position: relative;">
+               <img src="https://upsat.tn/wp-content/uploads/2021/08/Clubs-boostez-votre-carriere-avec-des-activites-extra-1.jpg"  class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column" style="height:180px">
+                  <p class="card-title">Nom du club :  {{art.nomClub}}</p>
+                  <p class="card-text mb-2"> Activité de club :  {{art.activite}}</p> 
+                  <p class="card-text mb-2"> Nombre de membres :  {{art.nbrMembres}}</p> 
+                  <p class="card-text mb-2"> Budget alloué :  {{art.budget}}</p> 
+                  <p class="card-text mb-2"> Date de fondation :  {{art.dateFondation}}</p> 
+                </div>
+
+
+
+
+                  <div style="display: inline; margin-left: 150px; margin-bottom: 20px; ">
+                  <a class="btn btn-success mt-auto align-self-start" style="margin-left: 2px;" routerLink="/updateClub/{{art.id}}">Modifier</a>&nbsp;
+                  <button  class="btn btn-danger " (click)="supprimerClub(art.id)" >Suprimer</button>
+                  <div *ngIf="alert"class="alert alert-danger" role="alert" routerLink="listeClubs">
+                    <strong>Club supprimé avec succées !</strong>
+                  </div>
+                  &nbsp;
+                  <button class="btn btn-info " routerLink="[inscriptionClub]" ><strong>S'inscrire</strong></button>
+                </div>
+
+                
+              </div>
+            </div>
+        </div>
+      </div>
+      
+    </div><br>
+  
+     
+       
+        
+      </div>
+      <section>
+  
+  

@@ -1,98 +1,105 @@
 
+<div class="content-wrapper">
+  <div class="content">
 
-<section id="contact" class="flex">
   
-    <div class="container form-group col-md-13 " data-aos="fade-up">
+   
      
       <div class="form-group " style="background-color: #3f51b5; " ><br/>
-      <h3> <p class="text-light text-center" >Ajouter un article scientifique</p></h3><br/>
+      <h3> <p class="text-light text-center" >{{title}}</p></h3><br/>
         
-    </div>
+   
    
 <form #f="ngForm" style="background-color: #fafafa;" >
     <div class="row" >
       <div class="form-group col-md-6">
         <label>Titre :</label>
-        <input  type="text"  [(ngModel)]="article.titre" minlength="3" name="name"
-        required placeholder="the product name" class="form-control" #a="ngModel">
+        <input   type="text"  [(ngModel)]="article.titre" name="name" required placeholder="the product name" class="form-control" #a="ngModel">
       </div>
+  
+   
+
       <div class="form-group col-md-6">
-        <label for="inputState">Catégorie :</label>
-        <select id="inputState" class="form-control"  >
-          <option selected [(ngModel)]="article.domaine"#b="ngModel" required> Choisir...</option>
-          <option>Li</option>
+        <label >Catégorie :</label>
+        <select  type="text" [(ngModel)]="article.categorie"   name="categorie"class="form-control">
+          <option   selected > ...Choisir...</option>
+          <option   selected >Science</option>
+          <option *ngFor="let categorie of categorieTable " >{{categorie.titre}}</option>
         </select>
-        <a href="">Ajouter Une Catégorie ?</a>
+      
       </div>
-      <div  *ngIf="a.invalid && a.touched" >
+
+      <div  *ngIf="a.invalid && a.touched " >
         <div *ngIf="a.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
-       
-      </div>
-      <div  *ngIf="b.invalid && b.touched" >
-        <div *ngIf="b.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
-       
       </div>
     </div>
-
-
 
     <div class="row" >
         <div class="form-group col-md-6">
-            <label for="input">Description :  </label>
-            <input type="text" class="form-control" id="inputPassword4" placeholder="Description"  [(ngModel)]="article.description"  #c="ngModel" required>
-           
-          </div>
-          
-          <div class="form-group  col-md-6">
-            <label for="inputAddress">Date :</label>
-            <div class=" datepicker date input-group shadow-sm">
-                <input type="text" placeholder="Choisir une date" class="form-control" id="reservationDate" [(ngModel)]="article.datePublication"  #d="ngModel">
-                <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-calendar"></i></span></div>
-            </div>
-      
-    </div>
-
-
-
-
-        <div class="form-group">
-            <label for="inputAddress">Paragraphe 1 : </label>
-            <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
-            
-          </div>
-          <div class="form-group">
-            <label for="inputAddress">Paragraphe 2 :</label>
-            <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
-            
+          <label>Description :</label>
+          <input   type="text"  [(ngModel)]="article.description" name="Description" required placeholder="Description" class="form-control" #c="ngModel">
         </div>
-
-
-
-        <div class="form-group">
-           <label for="inputAddress2">Ecrivain : </label>
-           <input type="text" class="form-control" id="inputAddress2" placeholder="Ecrivain">
-       </div>
-
-
+    
+        <div class=" myDate col-md-6">
+          <label for="inputAddress">Date :</label> <br/>
+          <input type="date" [(ngModel)]="article.datePublication"   style="width:636px; height: 38px;" name="date">
+      </div>
+  
+       
+       
+          <div  *ngIf="c.invalid && c.touched" >
+            <div *ngIf="c.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+          </div>
+        
+        </div>
+       
    
-        <div class="form-group ">
-          <label for="inputZip">Images :</label>
-          <input type="text" class="form-control" id="inputZip">
-       </div>
+  <div>
+    <label>Paragraphe 1 :</label>
+    <textarea #txt="ngModel" class="form-group col-md-12" name="question" cols="159" rows="8" placeholder="Paragraphe 1 * " [(ngModel)]="article.premiereParagraphe" required  #m="ngModel"></textarea>
+  </div>
+  <div  *ngIf="m.invalid && m.touched" >
+    <div *ngIf="m.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+  </div>
 
-
-    </div>
-
-
-   
-   
+  <div>
+    <label>Paragraphe 2 :</label>
+    <textarea #txt2="ngModel" class="form-group col-md-12" name="questionText" cols="159" rows="8" placeholder="Paragraphe 2 *" [(ngModel)]="article.deusciemeParagraphe" required  #l="ngModel"></textarea>
+  </div>
+  <div  *ngIf="l.invalid && l.touched" >
+    <div *ngIf="l.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+  </div>
+  <div class="row" >
+  <div class="form-group ">
+    <label>Ecrivain :</label>
+    <input   type="text"  [(ngModel)]="article.ecrivain" name="ecrivain" required placeholder="Ecrivain" class="form-control" #j="ngModel">
+  </div> 
+  <div  *ngIf="j.invalid && j.touched" >
+    <div *ngIf="j.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+  </div>
+</div>
+<div class="row" >
+  <div class="form-group ">
+    <label>Image :</label>
+    <input   type="text"  [(ngModel)]="article.imageArticle" name="Image" required placeholder="Image" class="form-control" #x="ngModel">
+  </div> 
+  <div  *ngIf="x.invalid && x.touched" >
+    <div *ngIf="x.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+  </div>
+</div>
     <br>
-    <button class="btn btn-primary" (click)="save()" [disabled]="f.invalid">
+    <div>
+    <button class="btn btn-primary"  style="  display: block;"(click)="save()"  [disabled]="f.invalid">
       Enregistrer
     </button>
+    <div *ngIf="alert "class="alert alert-success" role="alert">
+      <strong>Success ! </strong>Opération a été éffectuer avec succées !
+    </div>
+
   
+  </div>
   </form>
 </div>
 
 
-</section><!-- End Contact Section --><br/>
+<!-- End Contact Section --><br/></div></div>

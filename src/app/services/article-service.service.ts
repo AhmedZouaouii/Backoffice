@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Article } from './../models/articleScientifique';
+import { Article } from '../models/articleScientifique';
 
 import { HttpClient } from '@angular/common/http';
 @Injectable({
@@ -8,16 +8,17 @@ import { HttpClient } from '@angular/common/http';
 export class ArticleServiceService {
 
 
-  url='http://localhost:3000/Articles'
+  url='http://localhost:3000/Articles/'
+
   constructor(private httpService: HttpClient) { }
   //form the backend Side
-  getAllProduct(){
+  getAllArticles(){
     return this.httpService.get<Article[]>(this.url)
   }
   addArticle(article: Article){
     return this.httpService.post(this.url,article)
   }
-  deleteProduct(id:number){
+  deleteArticle(id:number){
     return this.httpService.delete(this.url+id)
   }
   updateProduct(product: Article){

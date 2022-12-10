@@ -1,0 +1,23 @@
+
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+
+<div style="height: 50px;"></div>
+<div style="margin-left:15%" class="row">
+  <div class="card border-dark mb-3 col-3" style="max-width: 18rem;margin: 10px;" *ngFor="let classe of classeList">
+    <div class="card-header" style="background-image: url({{classe.img}});color:white" >{{classe.nomClasse}}</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">NIVEAU :{{classe.niveau}}</h5>
+      <p class="card-text"> Effectif des étudiant :{{classe.nbrEtudiant}}</p>
+      <p class="card-text">Nombre de Groupe :{{classe.nbrGroupe}}</p>
+
+    </div>
+  </div></div>
+    </div>
+    <!-- /.content-header -->
+
+
+

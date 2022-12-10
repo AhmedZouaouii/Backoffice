@@ -1,0 +1,45 @@
+
+
+<div class="content-wrapper">
+  <div class="content">
+
+
+     
+      <div class="form-group " style="background-color: #3f51b5; " ><br/>
+      <h3> <p class="text-light text-center" >Ajouter une catégorie</p></h3><br/>
+        
+
+   
+<form #f="ngForm" style="background-color: #fafafa;" >
+    <div class="row" >
+      <div class="form-group col-md-12">
+        <label>Titre :</label>
+        <input   type="text"  [(ngModel)]="categorie.titre" name="name" required placeholder="the product name" class="form-control" #a="ngModel">
+      </div>
+  
+      <div  *ngIf="a.invalid && a.touched " >
+        <div *ngIf="a.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+      </div>
+    </div>
+
+    <div class="row" >
+        <div class="form-group col-md-12">
+          <label>Description :</label>
+          <input   type="text"  [(ngModel)]="categorie.description" name="Description" required placeholder="Description" class="form-control" #c="ngModel">
+        </div>
+         <div  *ngIf="c.invalid && c.touched" >
+            <div *ngIf="c.hasError('required')"><p style="color: red;">Ce champs est obligatoire *</p></div>
+          </div>
+         
+     </div>
+    <br>
+
+    <button class="btn btn-primary" [disabled]="f.invalid">
+      Enregistrer
+    </button>
+  
+  </form>
+</div>
+
+
+<!-- End Contact Section --><br/>
