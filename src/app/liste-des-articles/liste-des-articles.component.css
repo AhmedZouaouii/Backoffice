@@ -1,0 +1,19 @@
+#wrapper {
+  
+
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#first {
+ 
+    float:left; /* add this */
+   
+}
+#second {
+   
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}

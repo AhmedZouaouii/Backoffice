@@ -1,0 +1,49 @@
+<div class="content-wrapper">
+    <div class="content">
+      <div class="row pt-1">
+        <div class="col-12">
+          <h3 class="text-uppercase border-bottom mb-6">Listes des Livres</h3>
+          <div style="display: inline;" >
+     
+            <input type="text" style="border:none ; height : 46px ;width:400px; margin-right:720px ; margin-left:18px" placeholder="Trouver un article : id titre ..." > 
+            <button  class="btn btn-warning "[routerLink]="'/statistics'" >Statistiques</button>
+        </div><br>
+        <hr>
+          <div class="row col-12" >
+            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+            <div class="col-lg-6 mb-6 d-flex align-items-stretch" *ngFor="let art of livre">
+              <div class="card" style="position: relative;">
+               <img src="https://upsat.tn/wp-content/uploads/2021/08/Clubs-boostez-votre-carriere-avec-des-activites-extra-1.jpg"  class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column" style="height:180px">
+                  <p class="card-title">Titre de Livre :  {{art.titre}}</p>
+                  <p class="card-text mb-2"> Nom de l'auteur :  {{art.auteur}}</p> 
+                  <p class="card-text mb-2"> Prix de Livres :  {{art.prix}}</p> 
+                  <p class="card-text mb-2"> Date de publication :  {{art.datePublication}}</p> 
+                  
+                </div>
+
+
+
+
+                  <div style="display: inline; margin-left: 150px; margin-bottom: 20px; ">
+                  <a href="#" class="btn btn-success mt-auto align-self-start" style="margin-left: 2px;" routerLink="/updateLivre/{{art.id}}">Modifier</a>&nbsp;
+                  <button  class="btn btn-danger " (click)="supprimerLivre(art.id)">Suprimer</button>
+                  &nbsp;
+                  <button class="btn btn-info " routerLink="[inscriptionClub]" ><strong>emprunter</strong></button>
+                </div>
+                
+                
+              </div>
+            </div>
+        </div>
+      </div>
+      
+    </div><br>
+  
+     
+       
+        
+      </div>
+      <section>
+  
+  

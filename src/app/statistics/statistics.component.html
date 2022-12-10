@@ -1,0 +1,98 @@
+<div class="content-wrapper">
+    <div class="content">
+
+
+
+
+
+
+          <!-- Top Statistics -->
+          <div class="row">
+            <div class="col-xl-3 col-sm-6">
+              <div class="card card-mini mb-4"style="background-color:DarkSlateBlue;">
+                <div class="card-body">
+                  <h2 class="mb-1"style="color:white;">100</h2>
+                  <p style="color:white;">Articles publiés</p>
+                  <div class="chartjs-wrapper">
+                    <canvas id="barChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+              <div class="card  "style="background-color:steelblue;">
+                <div class="card-body">
+                  <h2 class="mb-1"style="color:white;">200</h2>
+                  <p style="color:white;"> Commentaires</p>
+                  <div class="chartjs-wrapper">
+                    <canvas id="dual-line"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-31 col-sm-3" >
+              <div class="card "style="background-color:skyblue;">
+                <div class="card-body">
+                  <h2 class="mb-1" style="color:white;">Likes</h2>
+                  <p style="color:white;">100</p>
+                  <div class="chartjs-wrapper">
+                    <canvas id="area-chart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6">
+              <div class="card "style="background-color:paleturquoise ;">
+                <div class="card-body">
+                  <h2 class="mb-1">13</h2>
+                  <p>dislikes</p>
+                  <div class="chartjs-wrapper">
+                    <canvas id="line"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <hr>
+          <h1> <p class="text-dark text-center" ><strong>Listes des articles</strong></p></h1><br/>
+          <hr>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+          </form>
+         
+          <br>
+      
+          <table id="basic-data-table" class="table nowrap" style="width:100%">
+            <thead>
+             <tr>
+              <th>Titre de l'article</th>
+              <th>Catégorie</th>
+              <th>Date de publication</th>
+              <th>Nombre de likes</th>
+              <th>Nombre de dislikes</th>
+              <th>Nombre de commentaires</th>
+              <th>Aficher les commentaires</th>
+             </tr>
+            </thead>
+          
+            <tbody>
+             <tr>
+              <td>Earth</td>
+              <td>Science fiction</td>
+              <td>10/10/2019</td>
+              <td>60</td>
+              <td>61 &nbsp; <button class = "btn-warning">likes </button></td>
+              <td>12 &nbsp; <button class = "btn-danger">dislikes </button></td>
+              <td><button class = "btn-info">commentaires </button></td>
+             </tr>
+            </tbody>
+           </table>
+           <br>
+           <hr>
+
+
+           
+
+  

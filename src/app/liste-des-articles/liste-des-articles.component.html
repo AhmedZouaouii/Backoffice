@@ -1,0 +1,43 @@
+
+<div class="content-wrapper">
+  <div class="content">
+
+    <div class="row pt-1">
+      <div class="col-12">
+        <h1 class="text-uppercase border-bottom mb-4">Listes des articles</h1>
+        <div style="display: inline;" >
+   
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </div><br>
+      <hr>
+        <div class="row col-12" >
+          <!--ADD CLASSES HERE d-flex align-items-stretch-->
+          <div class="col-lg-4 mb-4 d-flex align-items-stretch" *ngFor="let art of article">
+            <div class="card" style="position: relative;">
+              <img src="{{art.imageArticle}}"  class="card-img-top" alt="Card Image">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title"><strong>{{art.titre}}</strong></h5>
+                <p class="card-text mb-4"> {{art.description}}</p> <br>
+                <div style="display: inline; position: absolute; bottom: 5px; ">
+                <a href="#" class="btn btn-success mt-auto align-self-start" style="margin-left: 5px;" routerLink="/updateArticle/{{art.id}}">Modifier</a>&nbsp;
+                <button  class="btn btn-danger " (click)="deleteArticle(art.id)">Suprimer</button>&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"  routerLink="['/detail',art.id]"><strong>Détails...</strong></a>
+                
+              </div>
+              
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div><br>
+
+   
+     
+      
+    </div>
+ 

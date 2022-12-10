@@ -1,0 +1,55 @@
+.btn-outline-success{
+    background-color: rgb(58, 39, 187);
+    
+    color: white;
+}
+
+.tabulation{
+    width:25%;
+    text-align: center;
+}
+.tabulation:hover{
+    background-color: rgb(58, 39, 187,0.1);
+    color: rgb(58, 39, 187);
+    padding: 9px;
+}
+
+.active
+{
+    color:mediumblue;
+    cursor: pointer;
+}
+.activeMode{
+
+    border-bottom: 2px solid rgb(58, 39, 187);
+    color: rgb(58, 39, 187);
+    padding: 10px;font-weight: bold;
+}
+
+.hoverMode{
+    border-bottom: 1px solid gray;
+    color:gray;
+    padding: 9px;
+    font-weight: normal;
+
+}
+.btn-nouveau{
+    color: darkred;
+    margin: 10px 25% 10px 25%;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

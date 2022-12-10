@@ -1,10 +1,11 @@
 export class Article{
     id: number;
     titre: String;
-    domaine: number;
+    categorie: String;
     description: String;
-    contenu: number;
+    premiereParagraphe: String;
+    deusciemeParagraphe: String;
     ecrivain: String;
-    datePublication: number;
+    datePublication: Date;
     imageArticle:Array<any>;
 }
